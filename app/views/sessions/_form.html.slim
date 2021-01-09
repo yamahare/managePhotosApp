@@ -1,0 +1,11 @@
+= form_with(model: session, scope: :user, url: login_path, local: true) do |f|
+  = f.label :id
+    | ユーザid
+  = f.text_field :id
+
+  = f.label :password
+    | パスワード
+  = f.password_field :password
+
+  = f.submit 'ログインする'
+
