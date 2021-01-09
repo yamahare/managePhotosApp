@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # 写真
   resources :photos, only: %i(index create new)
+
+  # oauth
+  get 'oauth/callback', to: 'oauth#callback'
+  post 'oauth/tweet', to: 'oauth#tweet'
 end

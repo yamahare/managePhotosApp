@@ -1,13 +1,20 @@
+
 main
   = link_to "ログアウト", logout_path, method: "delete"
 
   h1 写真一覧
 
-  = link_to "写真をアップロード", new_photo_path
+  div = link_to "写真をアップロード", new_photo_path
+
+  div = link_to "MyTweetAppと接続", Oauth.authorize_url
 
   .photosWrap
     - @photos.each do |photo|
       .photo
-        = image_tag photo.image, class: 'photo__img'
         p.photo__title = photo.title
-
+        = image_tag photo.image, class: 'photo__img'
+        - if my_tweet_app_connected?
+          = form_with(scope: :photo, url: oauth_tweet_path, local: true) do |f|
+            = f.hidden_field :title, value: photo.title
+            = f.hidden_field :image_url, value: "#{request.base_url}#{rails_blob_path(photo.image)}"
+            = f.submit 'ツイートする'

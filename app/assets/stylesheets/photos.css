@@ -5,6 +5,7 @@
 
 .photo{
   margin: 16px;
+  text-align: center;
 }
 .photo__img{
   max-height: 300px;

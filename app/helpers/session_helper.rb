@@ -20,5 +20,9 @@ module SessionHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def my_tweet_app_connected?
+    session[:my_tweet_app_token].present?
+  end
 end
 
