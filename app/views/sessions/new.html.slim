@@ -2,9 +2,10 @@ main
   h1 ログイン
 
   - if @session.errors.any?
-    h2 = "#{pluralize(@session.errors.count, "エラー")} がありました。"
-    ul
-      - @session.errors.full_messages.each do |message|
-        li = message
+    .errorInfo
+      p = "#{pluralize(@session.errors.count, "エラー")} がありました。"
+      ul
+        - @session.errors.full_messages.each do |message|
+          li = message
 
   = render 'form', session: @session

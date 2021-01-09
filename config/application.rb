@@ -12,6 +12,15 @@ module ManagePhotosApp
     config.load_defaults 6.1
     config.generators.template_engine = :slim #slimに変更
 
+    # タイムゾーン
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+
+    # formのエラーでfield_with_errorsを消す
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      %Q(#{html_tag}).html_safe
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

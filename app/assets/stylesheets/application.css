@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+.alert--danger{
+  color: red;
+  border: 1px solid red;
+  border-radius: 12px;
+  padding: 8px;
+}
+.alert--success{
+  color: green;
+  border: 1px solid green;
+  border-radius: 12px;
+  padding: 8px;
+}
+.alert--warning{
+  color: #d2dc40;
+  border: 1px solid #d2dc40;
+  border-radius: 12px;
+  padding: 8px;
+}
+.errorInfo{
+  color: red;
+}
+.form--item{
+  padding: 16px;
+}
