@@ -1,0 +1,4 @@
+- flash.each do |message_type, message|
+  = content_tag(:div, class: "alert--#{message_type}") do
+    = raw(message)
+

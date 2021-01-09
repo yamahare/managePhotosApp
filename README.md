@@ -1,24 +1,11 @@
-# README
+# 使い方
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## コマンド実行順序
+1. rails db:migrate
+2. rails db:seed
+3. rails s
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ログイン方法
+ユーザIDに、userid
+パスワードに、password
+を入力してください。

@@ -4,10 +4,10 @@ class LoginForm
   include ActiveModel::Attributes
   extend ActiveModel::Translation
 
-  attribute :id, :string
+  attribute :userid, :string
   attribute :password, :string
 
-  validates :id, presence: true
+  validates :userid, presence: true
   validates :password, presence: true
 
   def initialize(params = {})
@@ -29,11 +29,11 @@ class LoginForm
   private
 
   def permit_params(params)
-    params.fetch(:user).permit(:id, :password)
+    params.fetch(:user).permit(:userid, :password)
   end
 
   def target_user
-    User.find_by(id: id.downcase)
+    User.find_by(userid: userid)
   end
 end
 

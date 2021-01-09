@@ -1,7 +1,7 @@
 = form_with(model: session, scope: :user, url: login_path, local: true) do |f|
-  = f.label :id
+  = f.label :userid
     | ユーザid
-  = f.text_field :id
+  = f.text_field :userid
 
   = f.label :password
     | パスワード
