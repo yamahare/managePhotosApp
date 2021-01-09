@@ -1,10 +1,10 @@
 = form_with(model: session, scope: :user, url: login_path, local: true) do |f|
-  .form--item
+  .form__item
     = f.label :userid
       | ユーザid
     = f.text_field :userid
 
-  .form--item
+  .form__item
     = f.label :password
       | パスワード
     = f.password_field :password

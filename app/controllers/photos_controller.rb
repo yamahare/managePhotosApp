@@ -3,6 +3,8 @@ class PhotosController < ApplicationController
   before_action :require_login
 
   def index
+    @photos = @current_user.photos.with_attached_image
+                          .order(created_at: :desc)
   end
 
   def new
@@ -13,7 +15,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
     @photo.user_id = @current_user.id
     if @photo.save
-      flash.now[:success] = '写真のアップロードに成功しました。'
+      flash[:success] = "写真のアップロードに成功しました。"
       redirect_to root_url
     else
       flash.now[:danger] = '写真のアップロードに失敗しました。'

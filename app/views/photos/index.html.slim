@@ -4,3 +4,10 @@ main
   h1 写真一覧
 
   = link_to "写真をアップロード", new_photo_path
+
+  .photosWrap
+    - @photos.each do |photo|
+      .photo
+        = image_tag photo.image, class: 'photo__img'
+        p.photo__title = photo.title
+

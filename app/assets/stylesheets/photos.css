@@ -1,0 +1,11 @@
+.photosWrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo{
+  margin: 16px;
+}
+.photo__img{
+  max-height: 300px;
+}
