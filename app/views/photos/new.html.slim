@@ -1,0 +1,7 @@
+main
+  div = link_to "ログアウト", logout_path, method: "delete"
+  div = link_to "写真一覧へ戻る", root_path
+
+  h1 写真アップロード
+
+  = render 'shared/valid_errors', object: @photo

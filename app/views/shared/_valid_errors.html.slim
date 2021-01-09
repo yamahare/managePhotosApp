@@ -1,0 +1,7 @@
+- if object.errors.any?
+  .errorInfo
+    h2 = "#{pluralize(object.errors.count, "エラー")} がありました。"
+    ul
+      - object.errors.full_messages.each do |message|
+        li = message
+

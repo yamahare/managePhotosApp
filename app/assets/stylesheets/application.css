@@ -19,18 +19,21 @@
   border: 1px solid red;
   border-radius: 12px;
   padding: 8px;
+  margin-bottom: 16px;
 }
 .alert--success{
   color: green;
   border: 1px solid green;
   border-radius: 12px;
   padding: 8px;
+  margin-bottom: 16px;
 }
 .alert--warning{
   color: #d2dc40;
   border: 1px solid #d2dc40;
   border-radius: 12px;
   padding: 8px;
+  margin-bottom: 16px;
 }
 .errorInfo{
   color: red;
