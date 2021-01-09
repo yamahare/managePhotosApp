@@ -1,11 +1,15 @@
 # 使い方
 
-## コマンド実行順序
-1. rails db:migrate
-2. rails db:seed
-3. rails s
+managePhotosApp
+写真管理アプリ
+
+## ローカルでのアプリケーションの動かし方
+1. bundle install
+2. rails db:migrate
+3. rails db:seed
+4. rails server
 
 ## ログイン方法
-ユーザIDに、userid
-パスワードに、password
+ユーザIDに、'userid'
+パスワードに、'password'
 を入力してください。
